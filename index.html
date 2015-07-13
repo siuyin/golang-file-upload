@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>File upload to Go</title>
+  <script src="app.js"></script>
+  <script src="papaparse.min.js"></script>
+</head>
+<body>
+<p>Please select .csv file(s) to upload:
+<form enctype="multipart/form-data" action="http://localhost:8082/upload" method="post">
+      <input type="file" 
+        accept=".csv" multiple name="uploads" id="input" size="80" onchange="checkUploads(this.files)" required p />
+      <p><input type="submit" value="upload"/>
+</form>
+
+<p><div id="result">...</div>
+
+</body>
+</html>
